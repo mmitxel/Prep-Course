@@ -44,7 +44,7 @@ function resta(x, y) {
   // Tu código:
 //  var subs = x - y;
 //  return subs;
-  return x- y;
+  return x - y;
 }
 
 function multiplica(x, y) {
@@ -65,14 +65,14 @@ function sonIguales(x, y) {
   // Devuelve "true" si "x" e "y" son iguales
   // De lo contrario, devuelve "false"
   // Tu código:
-  return x == y;
+  return x === y;
 }
 
 function tienenMismaLongitud(str1, str2) {
   // Devuelve "true" si las dos strings tienen la misma longitud
   // De lo contrario, devuelve "false"
   // Tu código:
-  return str1.length == str2.length;
+  return str1.length === str2.length;
 }
 
 function menosQueNoventa(num) {
@@ -99,14 +99,14 @@ function esPar(num) {
   // Devuelve "true" si "num" es par
   // De lo contrario, devuelve "false"
   // Tu código:
-  return num % 2 == 0
+  return num % 2 === 0
 }
 
 function esImpar(num) {
   // Devuelve "true" si "num" es impar
   // De lo contrario, devuelve "false"
   // Tu código:
-  return num % 2 != 0;
+  return num % 2 !== 0;
 }
 
 function elevarAlCuadrado(num) {
@@ -231,7 +231,7 @@ function esVocal(letra){
   //        return 'Es vocal';
   //      case 'i':
   //        return 'Es vocal';
-  //     case 'o':
+  //      case 'o':
   //        return 'Es vocal';
   //      case 'u':
   //        return 'Es vocal';
@@ -242,7 +242,7 @@ function esVocal(letra){
   if (letra.length > 1) {
     return 'Dato incorrecto';
   }
-  else if (letra == 'a' || letra == 'e' || letra == 'i' || letra == 'o' || letra == 'u'){
+  else if (letra === 'a' || letra === 'e' || letra === 'i' || letra === 'o' || letra === 'u'){
     return 'Es vocal';
   }
   else {
