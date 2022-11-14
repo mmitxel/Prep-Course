@@ -124,7 +124,7 @@ function numeroMasGrande(numeros) {
   // Tu código:
   var masGrande = numeros[0];
 
-  for (i = 0; i < numeros.length - 1 ; i++) {
+  for (let i = 0; i < numeros.length - 1 ; i++) {
     if ( masGrande < numeros[i]) {
       masGrande = numeros[i];
     }
@@ -161,7 +161,7 @@ function cuentoElementos(arreglo){
 
   let cant = 0;
 
-  for (i = 0; i < arreglo.length; i++) {
+  for (let i = 0; i < arreglo.length; i++) {
     if (arreglo[i] > 18) {
       cant++
     }
@@ -191,15 +191,23 @@ function empiezaConNueve(n) {
   //Desarrolle una función que recibe como parámetro un número entero n. Debe retornar true si el entero 
   //inicia con 9 y false en otro caso.
   //Escribe tu código aquí
-  let nStr = n.toString();
-//  let digitos = [];
-//  digitos = Array.from(nStr);
 
-    if (Array.from(nStr)[0] === '9') {
+  //let nStr = n.toString();
+
+  if (n.toString()[0] === '9') {
     return true;
   } else {
     return false;
   }
+
+//  let digitos = [];
+//  digitos = Array.from(nStr);
+
+//  if (Array.from(nStr)[0] === '9') {
+//    return true;
+//  } else {
+//    return false;
+//  }
 }
 
 
@@ -224,7 +232,7 @@ function mesesDelAño(array) {
   let meses = [];
   let estanLosTres = 0;
 
-  for (i = 0; i < array.length; i++) {
+  for (let i = 0; i < array.length; i++) {
     switch(array[i]) {
       case 'Enero':
       case 'Marzo':
@@ -250,7 +258,7 @@ function mayorACien(array) {
 
 let mayores = [];
 
-for (i = 0; i < array.length; i++) {
+for (let i = 0; i < array.length; i++) {
   if (array[i] > 100) {
     mayores.push(array[i]);
   }
@@ -271,8 +279,28 @@ function breakStatement(numero) {
   // Tu código:
 
   let guardados = [];
+  let j = 0;
 
-  for (i = 0; i < 10; i++) {
+
+  while (j < 10) {
+
+    numero += 2;
+    guardados.push(numero);
+    j++;
+
+    if (numero === j) {
+      break;
+    }
+
+    if (j === 10) {
+      return guardados;
+    }
+
+  }
+
+  return 'Se interrumpió la ejecución';
+
+  for (let i = 0; i < 10; i++) {
     numero += 2;
     guardados.push(numero);
 
@@ -284,6 +312,8 @@ function breakStatement(numero) {
   }
 
   return guardados;
+
+  
 
 }
 
@@ -298,7 +328,7 @@ function continueStatement(numero) {
 
   let guardados = [];
 
-  for (i = 0; i < 10; i++) {
+  for (let i = 0; i < 10; i++) {
 
     if (i === 4) {
       continue;
