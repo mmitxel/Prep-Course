@@ -163,7 +163,7 @@ function sumarLikesDeUsuario (usuario) {
   let suma = 0;
   
   for (let i = 0; i < usuario.posts.length; i++) {
-    suma = suma + usuario.posts[i].likes;
+    suma = suma + usuario.posts [i].likes;
   }
 
   return suma;
